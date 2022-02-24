@@ -105,11 +105,11 @@ def get_data():
 
 app = Flask(__name__)
 
-get_data()
+
 @app.route("/", methods=['POST', 'GET'])
 def main_page():
     player = okc[1628983]
-
+    get_data()
 
     if request.method == "POST":
         player = request.form['player']
